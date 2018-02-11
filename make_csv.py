@@ -10,7 +10,7 @@ def produce(symbol):
 
 	parser = csv.reader(response.text.split('\n'))
 	#converts the requests into csv file
-	f = open('result.csv', "w")
+	f = open('./.gitignore/result.csv', "w")
 	writer = csv.writer(f)
 	count =0
 	for i in parser:
