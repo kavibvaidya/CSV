@@ -10,14 +10,13 @@ def produce(symbol):
 
 	parser = csv.reader(response.text.split('\n'))
 	#converts the requests into csv file
-	f = open('./.gitignore/result.csv', "w")
+	f = open('result.csv', "w")
 	writer = csv.writer(f)
 	count =0
 	for i in parser:
 		if len(i) != 0:
-			writer.writerow((i[1],i[2],i[2],i[3],i[4],i[6],i[5]))
+			writer.writerow((i[0], i[1],i[2],i[2],i[3],i[4],i[6],i[5]))
 
 	f.close()
-
 
 produce("AAPL")
